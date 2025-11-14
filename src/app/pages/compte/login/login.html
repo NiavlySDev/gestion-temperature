@@ -1,0 +1,10 @@
+<div class="login_form">
+    <h2>Connexion</h2>
+    <h3>Login</h3>
+    <input pInputText class="login_input" autocomplete="off" [value]="loginField" (input)="loginField = $any($event.target).value" />
+
+    <h3>Password</h3>
+    <input pInputText class="login_input" autocomplete="off" type="password" [value]="passwordField" (input)="passwordField = $any($event.target).value" />
+
+    <p-button icon="pi pi-bars" class="toggle-button" (onClick)="login()"></p-button>
+</div>

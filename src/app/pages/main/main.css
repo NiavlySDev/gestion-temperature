@@ -1,0 +1,7 @@
+.center{
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    height: 80%;
+}

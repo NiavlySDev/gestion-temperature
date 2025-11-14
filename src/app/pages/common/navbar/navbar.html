@@ -1,0 +1,22 @@
+@if (Visible) {
+        <nav class="navbar">
+            @if (this.authService.isLogged()) {
+                <p>Connecté {{ this.authService.Utilisateur?.name }} {{ this.authService.Utilisateur?.firstName }}</p>
+            } @else {
+                <p>Non Connecté</p>
+            }
+            @for (item of Routes; track $index) {
+                @if (item.pageType == null || 
+                    (item.pageType == pageType.LoggedIn && this.authService.isLogged()) || 
+                    (item.pageType == pageType.LoggedOut && !this.authService.isLogged())) {
+                    <p-button 
+                        [label]="item.label" 
+                        [severity]="getSeverity(item.color)"
+                        (onClick)="navigate(item.route)">
+                    </p-button>
+                }
+            }
+        </nav>
+}
+
+<p-button class="toggle-button" (onClick)="toggleVisibility()"><i class="pi pi-bars"></i></p-button>

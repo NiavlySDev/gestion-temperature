@@ -1,0 +1,11 @@
+<div class="temperature-dashboard">
+  
+  <div class="chart-container">
+    <p-chart type="line" [data]="data" [options]="options" class="h-[30rem]" />
+  </div>
+</div>
+
+<div class="header">
+  <p-datepicker class="date-picker" [(ngModel)]="selectedDate" dateFormat="dd/mm/yy" (onSelect)="afficherTemperature()"/>
+  <p-select class="room-select" [options]="salles" [(ngModel)]="selectedSalle" optionLabel="NUMERO" placeholder="Choisir une salle" class="w-full md:w-56" (onChange)="afficherTemperature()"/>
+</div>

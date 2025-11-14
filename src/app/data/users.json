@@ -1,0 +1,22 @@
+[
+  {
+    "id":1,
+    "type":"Administrator",
+    "age":45,
+    "firstName":"homer",
+    "ismasculin":true,
+    "login":"HS",
+    "name":"Simpson",
+    "password":"secret"
+  },
+  {
+    "id":2,
+    "type":"Agent",
+    "age":39,
+    "firstName":"Marge",
+    "ismasculin":false,
+    "login":"MS",
+    "name":"Simpson",
+    "password":"secret"
+  }
+]

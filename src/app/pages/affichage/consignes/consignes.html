@@ -1,0 +1,54 @@
+<div class="temp-card">
+  <div class="left">
+    <div class="icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+        <path d="M14 14.76V6a2 2 0 10-4 0v8.76A4 4 0 1014 14.76z"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="value">
+      <div class="number" [ngStyle]="{ color: accentColor() }">
+        {{ consigne() | number:'1.0-1' }}
+        <span class="unit">°C</span>
+      </div>
+      <div class="label">Consigne</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="thermo">
+      <div class="thermo-track">
+        <div class="thermo-fill"
+             [ngStyle]="{ height: fillPercent() + '%', background: accentColor() }">
+        </div>
+      </div>
+
+      <div class="scale">
+        <span>-10</span>
+        <span>0</span>
+        <span>10</span>
+        <span>20</span>
+        <span>30</span>
+        <span>40</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-slider
+  [(ngModel)]="consigneValue"
+  [min]="-10"
+  [max]="40"
+  class="w-56 slider"
+  (ngModelChange)="consigne.set($event)"
+  (onSlideEnd)="changeTemperature()"
+>
+</p-slider>
+
+<div class="temp-card">
+  <div class="header">
+    <p-datepicker class="date-picker" [(ngModel)]="selectedDate" dateFormat="dd/mm/yy" (onChange)="changeTemperature()"/>
+    <p-select class="room-select" [options]="salles" [(ngModel)]="selectedSalle" optionLabel="NUMERO" placeholder="Choisir une salle" class="w-full md:w-56" (onChange)="changeTemperature()"/>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+[
+    {
+        "ID":"1",
+        "TYPE":"Consigne",
+        "DATE":"2025-01-01 08:30:00",
+        "VALUE":"19.5",
+        "LOCAL_NUMERO":"458"
+    },
+    {
+        "ID":"2",
+        "TYPE":"Consigne",
+        "DATE":"2025-01-01 08:30:00",
+        "VALUE":"22.5",
+        "LOCAL_NUMERO":"459"
+    },
+    {
+        "ID":"3",
+        "TYPE":"Consigne",
+        "DATE":"2025-01-01 08:30:00",
+        "VALUE":"15",
+        "LOCAL_NUMERO":"435"
+    },
+    {
+        "ID":"4",
+        "TYPE":"Mesure",
+        "DATE":"2025-01-01 08:30:00",
+        "VALUE":"17.2",
+        "LOCAL_NUMERO":"458"
+    },
+    {
+        "ID":"5",
+        "TYPE":"Mesure",
+        "DATE":"2025-01-01 10:30:00",
+        "VALUE":"19.2",
+        "LOCAL_NUMERO":"458"
+    }
+]

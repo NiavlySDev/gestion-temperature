@@ -1,0 +1,9 @@
+<br>
+<h1>Bienvenue {{Utilisateur?.name}} {{Utilisateur?.firstName}}</h1>
+
+<p-button label="Changement Mot de Passe" severity="warn" (click)="toggleChangePassword()"></p-button>
+
+@if (this.showChangePassword) {
+    <app-change-password></app-change-password>
+}
+
